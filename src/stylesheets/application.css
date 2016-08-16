@@ -1,0 +1,34 @@
+.navbar-brand {
+  padding-top: 0;
+  padding-left: 10%;
+}
+
+.navbar {
+  position: fixed;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.navbar-right {
+  padding-right: 10%;
+}
+
+.jumbotron {
+  margin-top: 8%;
+}
+
+.bg-1 {
+  background-image: url("../images/black-background-2.jpg");
+}
+
+.bg-2 {
+  background-color: white;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.bg-3 {
+  background-color: black;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
