@@ -46002,17 +46002,8 @@ module.exports = Header;
 "use strict";
 
 var React = require('react');
-var GunApi = require('../../api/gunApi');
 
-var Guns = React.createClass({displayName: "Guns",
-  getInitialState: function () {
-    return {
-      guns: []
-    };
-  },
-  componentWillMount: function () {
-    this.setState({ guns: GunApi.getAllGuns() });
-  },
+var GunList = React.createClass({displayName: "GunList",
   render: function () {
     var createGunRow = function (gun) {
       return (
@@ -46036,7 +46027,7 @@ var Guns = React.createClass({displayName: "Guns",
         ), 
         React.createElement("div", {className: "container"}, 
           React.createElement("div", {className: "row"}, 
-            this.state.guns.map(createGunRow, this)
+            this.props.guns.map(createGunRow, this)
           )
         )
       )
@@ -46044,9 +46035,40 @@ var Guns = React.createClass({displayName: "Guns",
   }
 });
 
-module.exports = Guns;
+module.exports = GunList;
 
-},{"../../api/gunApi":160,"react":158}],164:[function(require,module,exports){
+},{"react":158}],164:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var GunApi = require('../../api/gunApi');
+var GunList = require('./gunList');
+
+var GunPage = React.createClass({displayName: "GunPage",
+  getInitialState: function () {
+    return {
+      guns: []
+    };
+  },
+
+  componentDidMount: function () {
+    if (this.isMounted()) {
+      this.setState({ guns: GunApi.getAllGuns() });
+    }
+  },
+
+  render: function () {
+    return (
+      React.createElement("div", null, 
+        React.createElement(GunList, {guns: this.state.guns})
+      )
+    );
+  }
+});
+
+module.exports = GunPage;
+
+},{"../../api/gunApi":160,"./gunList":163,"react":158}],165:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -46102,7 +46124,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":158}],165:[function(require,module,exports){
+},{"react":158}],166:[function(require,module,exports){
 $ = jQuery = require('jquery');
 var React = require('react');
 var Home = require('./components/homePage');
@@ -46144,4 +46166,4 @@ var Header = require('./common/header');
   render();
 })(window);
 
-},{"./about/aboutPage":159,"./common/header":162,"./components/guns/gunPage":163,"./components/homePage":164,"jquery":2,"react":158}]},{},[165]);
+},{"./about/aboutPage":159,"./common/header":162,"./components/guns/gunPage":164,"./components/homePage":165,"jquery":2,"react":158}]},{},[166]);
