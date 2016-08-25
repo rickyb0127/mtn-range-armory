@@ -22,22 +22,33 @@
   margin-right: 10%;
 }
 
-.bg-1 {
-  background-image: url("../images/background-1.jpg");
+.bg-1-home {
+  opacity: 0.4;
+  background-image: url("../images/mountains.JPG");
+  background-attachment: fixed;
   background-position: center;
-  padding-top: 5%;
+  background-size: 140%;
+  height: 600px;
+  background-repeat: no-repeat;
+}
+
+.bg-1-other {
+  opacity: 0.4;
+  background-image: url("../images/background-1.jpg");
+  background-attachment: fixed;
+  height: 600px;
+  background-position: center;
+  background-repeat:repeat;
 }
 
 .bg-2 {
-  background-color: white;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .bg-3 {
-  background-color: black;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  background-color: #1a1a1a;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .mySlides {
@@ -55,4 +66,27 @@
 .gunRow {
   text-align: center;
   height: 200px;
+}
+
+.in-background-text {
+  text-align: center;
+  position: relative;
+  bottom: 15em;
+  margin-top: -8em;
+}
+
+body {
+  font-family: ‘Courier New’, Courier, monospace;
+}
+
+iframe {
+  pointer-events: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.break {
+  height: 2em;
 }

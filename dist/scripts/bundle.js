@@ -48929,11 +48929,32 @@ var React = require('react');
 var About = React.createClass({displayName: "About",
   render: function () {
     return (
-      React.createElement("div", {className: "container"}, 
-        React.createElement("div", {className: "jumbotron"}, 
-          React.createElement("h1", null, "About"), 
+      React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}), 
+        React.createElement("div", {className: "in-background-text"}, 
+          React.createElement("h1", null, "ABOUT")
+        ), 
+        React.createElement("div", {className: "bg-2"}
+        ), 
+        React.createElement("div", {className: "container"}, 
           React.createElement("p", null, 
           "Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at."
+          )
+        ), 
+        React.createElement("div", {className: "bg-3"}, 
+          React.createElement("div", {className: "container"}, 
+            React.createElement("address", null, 
+              "7512 Grandview Ave", React.createElement("br", null), 
+              "Arvada, CO 80002", React.createElement("br", null), 
+              "720-988-9853", React.createElement("br", null), 
+              "TUES-SAT: 10-7  SUN: 12-7"
+            ), 
+            React.createElement("p", null, 
+              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
+              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
+              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
+              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
+            )
           )
         )
       )
@@ -49023,16 +49044,31 @@ var GunList = React.createClass({displayName: "GunList",
     };
     return (
       React.createElement("div", null, 
-        React.createElement("div", {className: "bg-1"}, 
-          React.createElement("div", {className: "container"}, 
-            React.createElement("div", {className: "jumbotron welcome-panel-1"}, 
-              React.createElement("h2", null, "GUNS")
-            )
-          )
+        React.createElement("div", {className: "bg-1-other"}), 
+        React.createElement("div", {className: "in-background-text"}, 
+          React.createElement("h1", null, "GUNS")
+        ), 
+        React.createElement("div", {className: "bg-2"}
         ), 
         React.createElement("div", {className: "container"}, 
           React.createElement("div", {className: "row"}, 
             this.props.guns.map(createGunRow, this)
+          )
+        ), 
+        React.createElement("div", {className: "bg-3"}, 
+          React.createElement("div", {className: "container"}, 
+            React.createElement("address", null, 
+              "7512 Grandview Ave", React.createElement("br", null), 
+              "Arvada, CO 80002", React.createElement("br", null), 
+              "720-988-9853", React.createElement("br", null), 
+              "TUES-SAT: 10-7  SUN: 12-7"
+            ), 
+            React.createElement("p", null, 
+              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
+              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
+              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
+              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
+            )
           )
         )
       )
@@ -49077,42 +49113,63 @@ module.exports = GunPage;
 "use strict";
 
 var React = require('react');
+var Route = require('react-router');
+var Link = Route.Link;
 
 var Home = React.createClass({displayName: "Home",
   render: function () {
     return (
       React.createElement("div", null, 
-        React.createElement("div", {className: "bg-1"}, 
-          React.createElement("div", {className: "container"}, 
-            React.createElement("div", {className: "jumbotron welcome-panel-1"}, 
-              React.createElement("h2", null, "WELCOME TO MTN RANGE ARMORY"), 
-              React.createElement("p", null, "ALL OF YOUR GUN NEEDS, NO BS")
-            )
-          )
+        React.createElement("div", {className: "bg-1-home"}), 
+        React.createElement("div", {className: "in-background-text"}, 
+          React.createElement("h1", null, 
+            "YOUR ONE STOP SHOP FOR ALL YOUR GUN NEEDS"
+          ), 
+          React.createElement("div", {className: "break"}), 
+          React.createElement(Link, {className: "btn btn-info btn-lg", to: "app"}, "SHOP NOW")
         ), 
         React.createElement("div", {className: "bg-2"}, 
+          React.createElement("h3", {className: "centered"}, React.createElement("strong", null, "GUNS * TRAINING * GUNSMITHING")), 
+          React.createElement("div", {className: "break"}), 
           React.createElement("div", {className: "container"}, 
-            React.createElement("address", null, 
-              "7512 Grandview Ave", React.createElement("br", null), 
-              "Arvada, CO 80002", React.createElement("br", null), 
-              "720-988-9853", React.createElement("br", null), 
-              "TUES-SAT: 10-7  SUN: 12-7"
+            React.createElement("div", {className: "row centered"}, 
+              React.createElement("div", {className: "col-md-4"}, 
+                React.createElement("img", {src: "../images/store.jpeg", width: "300"})
+              ), 
+              React.createElement("div", {className: "col-md-4"}, 
+                React.createElement("img", {src: "../images/mtn-range-armory-logo-2.png", width: "300"})
+              ), 
+              React.createElement("div", {className: "col-md-4"}, 
+                React.createElement("img", {src: "../images/store-2.jpeg", width: "300"})
+              )
+            ), 
+            React.createElement("div", {className: "break"}), 
+            React.createElement("div", {className: "break"}), 
+            React.createElement("p", null, 
+              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
+              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
+              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
+              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
             ), 
             React.createElement("p", null, 
               "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
               "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
               "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
               "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
+            ), 
+            React.createElement("br", null), 
+            React.createElement("div", {className: "row"}, 
+              React.createElement("iframe", {width: "100%", height: "300", frameBorder: "0", style: {border: 0}, src: "https://www.google.com/maps/embed/v1/place?q=7512%20Grandview%20Avenue%2C%20Arvada%2C%20CO%2C%20United%20States&key=AIzaSyCisUkWAL2WnxISS9691pNmsKmTQYwW9g8", allowFullScreen: true})
             )
           )
         ), 
         React.createElement("div", {className: "bg-3"}, 
           React.createElement("div", {className: "container"}, 
-            React.createElement("p", null, 
-              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
-              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
-              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
-              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
+            React.createElement("address", null, 
+              "7512 Grandview Ave", React.createElement("br", null), 
+              "Arvada, CO 80002", React.createElement("br", null), 
+              "720-988-9853", React.createElement("br", null), 
+              "TUES-SAT: 10-7  SUN: 12-7"
             ), 
             React.createElement("p", null, 
               "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
@@ -49129,7 +49186,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":197}],207:[function(require,module,exports){
+},{"react":197,"react-router":28}],207:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
