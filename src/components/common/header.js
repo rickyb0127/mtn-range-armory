@@ -7,6 +7,12 @@ var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 var IndexLink = ReactRouter.IndexLink;
 
+$(document).ready(function () {
+  $('.navbar-collapse').click('li', function() {
+    $('.navbar-toggle').click();
+  });
+});
+
 var Header = React.createClass({
   render: function () {
     return (
@@ -28,9 +34,9 @@ var Header = React.createClass({
               <ul className="nav navbar-nav">
                 <li><IndexLink to="/">HOME</IndexLink></li>
                 <li><Link to="/guns">GUNS</Link></li>
-                <li><Link to="app">LONG GUNS</Link></li>
-                <li><Link to="app">AMMUNITION</Link></li>
-                <li><Link to="app">CONTACT</Link></li>
+                <li><Link to="/longGuns">LONG GUNS</Link></li>
+                <li><Link to="/ammunition">AMMUNITION</Link></li>
+                <li><Link to="/">CONTACT</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
               </ul>
             </div>

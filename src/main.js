@@ -6,9 +6,9 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var routes = require('./routes');
 var render = ReactDOM.render;
-var browserHistory = ReactRouter.browserHistory;
+var hashHistory = ReactRouter.hashHistory;
 
 render(
-  <Router history={browserHistory} routes={routes} />,
+  <Router history={hashHistory} routes={routes} />,
   document.getElementById('app')
 );

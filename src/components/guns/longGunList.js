@@ -4,7 +4,7 @@ var React = require('react');
 var Route = require('react-router');
 var Link = Route.Link;
 
-var GunList = React.createClass({
+var LongGunList = React.createClass({
   render: function () {
     var createGunRow = function (gun) {
       return (
@@ -22,7 +22,7 @@ var GunList = React.createClass({
         <div className="bg-1-other">
         </div>
         <div className="in-background-text-other">
-          <h1>Guns</h1>
+          <h1>Long Guns</h1>
         </div>
         <div className="bg-2">
         </div>
@@ -47,4 +47,4 @@ var GunList = React.createClass({
   }
 });
 
-module.exports = GunList;
+module.exports = LongGunList;

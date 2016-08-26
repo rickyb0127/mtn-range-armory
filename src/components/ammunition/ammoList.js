@@ -4,15 +4,15 @@ var React = require('react');
 var Route = require('react-router');
 var Link = Route.Link;
 
-var GunList = React.createClass({
+var AmmoList = React.createClass({
   render: function () {
-    var createGunRow = function (gun) {
+    var createAmmoRow = function (ammo) {
       return (
-        <div key={gun.id}>
+        <div key={ammo.id}>
           <div className="gunRow col-md-3">
-            <div className="img-thumbnail img-responsive"><img height="100px" src={gun.image}/></div>
-            <div>{gun.modelName}</div>
-            <div>${gun.price}</div>
+            <div className="img-thumbnail img-responsive"><img height="100px" src={ammo.image}/></div>
+            <div>{ammo.modelName}</div>
+            <div>${ammo.price}</div>
           </div>
         </div>
       );
@@ -22,14 +22,14 @@ var GunList = React.createClass({
         <div className="bg-1-other">
         </div>
         <div className="in-background-text-other">
-          <h1>Guns</h1>
+          <h1>Ammunition</h1>
         </div>
         <div className="bg-2">
         </div>
         <div className="break"></div>
         <div className="container">
           <div className="row">
-            {this.props.guns.map(createGunRow, this)}
+            {this.props.ammos.map(createAmmoRow, this)}
           </div>
         </div>
         <div className="bg-3">
@@ -47,4 +47,4 @@ var GunList = React.createClass({
   }
 });
 
-module.exports = GunList;
+module.exports = AmmoList;

@@ -53,10 +53,9 @@
     background-repeat: no-repeat;
   }
   .bg-1-other {
-    opacity: 0.4;
     background-image: url("../images/background-1.jpg");
     background-size: cover;
-    height: 2em;
+    height: 1em;
     background-position: center;
     background-repeat:repeat;
   }
@@ -67,17 +66,25 @@
   .in-background-text {
     text-align: center;
     position: relative;
-    top: 1em;
+    top: -8em;
     margin-top: -8em;
+    margin-bottom: -5em;
+  }
+  .in-background-text-other {
+    text-align: center;
+    position: relative;
+    margin-top: -9em;
+    margin-bottom: 4em;
   }
 }
 
 .bg-1-other {
-  opacity: 0.4;
   background-image: url("../images/background-1.jpg");
-  height: 20em;
   background-position: center;
-  background-repeat:repeat;
+  background-size: cover;
+  padding-top: 0%;
+  height: 16em;
+  background-repeat: no-repeat;
 }
 
 .bg-2 {
@@ -111,7 +118,13 @@
   text-align: center;
   position: relative;
   bottom: 15em;
-  margin-top: -8em;
+  margin-top: -6em;
+}
+
+.in-background-text-other {
+  text-align: center;
+  position: relative;
+  margin-top: -9em;
 }
 
 body {
@@ -128,4 +141,8 @@ iframe {
 
 .break {
   height: 2em;
+}
+
+.footer {
+  color: white;
 }

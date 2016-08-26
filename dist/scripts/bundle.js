@@ -50934,6 +50934,324 @@ module.exports = require('./lib/React');
 "use strict";
 
 //This file is mocking a web API by hitting hard coded data.
+var ammos = require('./ammoData').ammos;
+var _ = require('lodash');
+
+//This would be performed on the server in a real app. Just stubbing in.
+var _generateId = function(ammo) {
+	return ammo.id;
+};
+
+var _clone = function(item) {
+	return JSON.parse(JSON.stringify(item)); //return cloned copy so that the item is passed by value instead of by reference
+};
+
+var AmmoApi = {
+	getAllAmmos: function() {
+		return _clone(ammos);
+	},
+
+	getAmmoById: function(id) {
+		var ammo = _.find(ammos, {id: id});
+		return _clone(ammo);
+	},
+
+	saveAmmo: function(ammo) {
+		//pretend an ajax call to web api is made here
+		console.log('Pretend this just saved the ammo to the DB via AJAX call...');
+
+		if (ammo.id) {
+			var existingAmmoIndex = _.indexOf(ammos, _.find(ammos, {id: ammo.id}));
+			ammos.splice(existingAmmoIndex, 1, ammo);
+		} else {
+			//Just simulating creation here.
+			//The server would generate ids for new ammos in a real app.
+			//Cloning so copy returned is passed by value rather than by reference.
+			ammo.id = _generateId(ammo);
+			ammos.push(ammo);
+		}
+
+		return _clone(ammo);
+	},
+
+	deleteAmmo: function(id) {
+		console.log('Pretend this just deleted the ammo from the DB via an AJAX call...');
+		_.remove(ammos, { id: id});
+	}
+};
+
+module.exports = AmmoApi;
+
+},{"./ammoData":226,"lodash":3}],226:[function(require,module,exports){
+module.exports = {
+  ammos:
+  [
+    {
+      id: '1',
+      modelName: 'REM 22LR 40gr 500 RD',
+      price: '41.99',
+      image: 'images/rem-22lr-40gr-500rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '2',
+      modelName: 'REM ULTDF .380 102gr BJHP 20 RD',
+      price: '20.99',
+      image: 'images/rem-ultdf-.380-102gr-bjhp-20rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '3',
+      modelName: 'REM .22 MAG 40gr PSP 50 RD',
+      price: '23.99',
+      image: 'images/rem-.22-mag-40gr-psp-50rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '4',
+      modelName: '​BLAZER BRASS 9MM 124 & 115GR FMJ 50 RD',
+      price: '15.99',
+      image: 'images/blazer-brass-9mm-124-115gr-fmj-50rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '5',
+      modelName: '​SPR LAWCLEEN 9mm 124gr TMJ RN 50 RD',
+      price: '19.99',
+      image: 'images/spr-lawcleen-9mm-124gr-tmj-rn-50rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '6',
+      modelName: '​CCI .40 SW 165gr FMJ 50 RD',
+      price: '17.99',
+      image: 'images/cci-.40-sw-165gr-fmj-50rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '7',
+      modelName: 'CCI 40SW 180gr FMJ 50 RD',
+      price: '15.99',
+      image: 'images/cci-40sw-180gr-fmj-50rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '8',
+      modelName: 'FEDERAL .45ACP 230gr FMJ 50 RD',
+      price: '22.99',
+      image: 'images/charter-arms-chick-lady.png',
+      isOnSale: false
+    },
+    {
+      id: '9',
+      modelName: 'FEDERAL 230GR JHP 50 RD',
+      price: '28.99',
+      image: 'images/federal-230gr-jhp-50rd.png',
+      isOnSale: false
+    },
+    {
+      id: '10',
+      modelName: '​WIN .45 ACP 230gr  FMJ 100 RD',
+      price: '43.99',
+      image: 'images/win-.45-acp-230gr-fmj-100rd.png',
+      isOnSale: false
+    },
+    {
+      id: '11',
+      modelName: 'WIN .45ACP 230gr FMJ 200 RD',
+      price: '87.99',
+      image: 'images/win-.45acp-230gr-fmj-200rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '12',
+      modelName: '​PPU .357 MAG SJHP 50 RD',
+      price: '28.99',
+      image: 'images/ppu-.357-mag-sjhp-50rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '13',
+      modelName: '​CCI 17HMR 20gr FMJ 50 RD',
+      price: '16.49',
+      image: 'images/cci-17mr-20gr-fmj-50-rd.png',
+      isOnSale: false
+    },
+    {
+      id: '14',
+      modelName: 'REM .308 MATCH 168gr BTHP 20 RD',
+      price: '35.99',
+      image: 'images/rem-.308-match-168gr-bthp-20rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '15',
+      modelName: '​REM .38SPL 125gr +P SJHP 50 RD',
+      price: '21.99',
+      image: 'images/rem-.38spl-125gr-p-sjhp-50rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '16',
+      modelName: 'REM .40 S&W 180gr HOME DEFENSE BJHP 25 RD',
+      price: '22.99',
+      image: 'images/rem-.40-sw-180gr-home-defense-bjhp-23rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '17',
+      modelName: '​HRN 9mm CRITICAL DUTY PERSONAL & HOME DEFENSE 135gr +P HOLLOW POINT W/ FLEX TIP 25 RD',
+      price: '24.99',
+      image: 'images/hrn-9mm-critical-duty-personal-flex-tip-25rd.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '18',
+      modelName: 'FED 9mm 115gr JHP PER DEF 20 RD',
+      price: '21.99',
+      image: 'images/fed-9mm-115gr-jhp-per-def-20rd.png',
+      isOnSale: false
+    },
+    {
+      id: '19',
+      modelName: 'HRN CRITDTY 10mm 175gr FLEXLOCK 20 RD',
+      price: '24.99',
+      image: 'images/hrn-critdty-10mm-175gr-flexlock-20rd.png',
+      isOnSale: false
+    },
+    {
+      id: '20',
+      modelName: '​WIN 10mm 175 gr JHP SILVER TIP PER DEF',
+      price: '22.99',
+      image: 'images/win-10mm-175gr-jhp-silver-tip-per-def.png',
+      isOnSale: false
+    },
+    {
+      id: '21',
+      modelName: '​FEDERAL 270WIN 150GR 20 RD',
+      price: '20.99',
+      image: 'images/federal-270win-150gr-20rds.png',
+      isOnSale: false
+    },
+    {
+      id: '22',
+      modelName: '​FEDERAL 30-06 180GR 20 RD',
+      price: '21.99',
+      image: 'images/federal-30-06-180gr-20rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '23',
+      modelName: 'FEDERAL 7MM MAG 175GR 20 RD',
+      price: '27.99',
+      image: 'images/federal-7mm-mag-175gr-20rds.png',
+      isOnSale: false
+    },
+    {
+      id: '24',
+      modelName: 'FEDERAL 300WM 180GR 20 RD',
+      price: '29.99',
+      image: 'images/federal-300wm-180gr-20rds.png',
+      isOnSale: false
+    },
+    {
+      id: '25',
+      modelName: '​ZQI 5.56X45 NATO 30 RD',
+      price: '13.49',
+      image: 'images/zqi-5.56x45-nato-30rds.png',
+      isOnSale: false
+    },
+    {
+      id: '26',
+      modelName: 'SIG SAUER 357SIG 125GR JHP 20 RD',
+      price: '17.99',
+      image: 'images/sig-sauer-357sig-125gr-jhp-20rds.png',
+      isOnSale: false
+    },
+    {
+      id: '27',
+      modelName: 'REMINGTON 25 AUTO 50GR FMJ 50 RD',
+      price: '24.99',
+      image: 'images/remington-25-auto-50gr-fmj-50rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '28',
+      modelName: '​FIOCCHI 32 AUTO 73GR 50 RD',
+      price: '11.95',
+      image: 'images/fiocchi-32-auto-73gr-50rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '29',
+      modelName: '​REMINGTON .38 SPCL 158GR LDRN 50 RD',
+      price: '19.99',
+      image: 'images/remington-.38-spcl-158gr-ldrn-50rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '30',
+      modelName: 'REMINGTON 115GR 6.8 SPC 20 RD',
+      price: '19.99',
+      image: 'images/remington-115gr-6.8-spc-20rds.png',
+      isOnSale: false
+    },
+    {
+      id: '31',
+      modelName: '​FEDERAL 30-30 WIN 150GR 20 RD',
+      price: '18.99',
+      image: 'images/federal-30-30-win-150gr-20rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '32',
+      modelName: 'FEDERAL AMERICAN EAGLE 150GR 300 BLACKOUT 20 RD',
+      price: '18.99',
+      image: 'images/federal-american-eagle-150gr-300-blackout-20rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '33',
+      modelName: '​​WINCHESTER AA .410 2.75" 7.5 SHOT',
+      price: '10.99',
+      image: 'images/winchester-aa-.410-2.75-7.5-shot.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '34',
+      modelName: 'ZQI 7.62X 51 147GR 20 RD',
+      price: '15.00',
+      image: 'images/zqi-7.62x-51-147gr-20rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '35',
+      modelName: '​WINCHESTER 45 LONG COLT 255GR LRN 20 RD',
+      price: '20.99',
+      image: 'images/winchester-45-long-colt-255gr-lrn-20rds.png',
+      isOnSale: false
+    },
+    {
+      id: '36',
+      modelName: 'REMINGTON 44 MAGNUM 240GR SP 50 RD',
+      price: '38.00',
+      image: 'images/remington-44-magnum-240gr-sp-50rds.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '37',
+      modelName: '​REMINGTON 264 WIN MAG 140GR CORE-LOKT PSP',
+      price: '55.00',
+      image: 'images/remington-264-win-mag-140gr-core-lokt-psp.jpeg',
+      isOnSale: false
+    }
+  ]
+};
+
+},{}],227:[function(require,module,exports){
+"use strict";
+
+//This file is mocking a web API by hitting hard coded data.
 var guns = require('./gunData').guns;
 var _ = require('lodash');
 
@@ -50982,7 +51300,7 @@ var GunApi = {
 
 module.exports = GunApi;
 
-},{"./gunData":226,"lodash":3}],226:[function(require,module,exports){
+},{"./gunData":228,"lodash":3}],228:[function(require,module,exports){
 module.exports = {
   guns:
   [
@@ -51045,7 +51363,7 @@ module.exports = {
   ]
 };
 
-},{}],227:[function(require,module,exports){
+},{}],229:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51054,26 +51372,26 @@ var About = React.createClass({displayName: "About",
   render: function () {
     return (
       React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}
+        ), 
+        React.createElement("div", {className: "in-background-text-other"}, 
+          React.createElement("h1", null, "About")
+        ), 
         React.createElement("div", {className: "bg-2"}
         ), 
+        React.createElement("div", {className: "break"}), 
         React.createElement("div", {className: "container"}, 
           React.createElement("p", null, 
           "Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at."
           )
         ), 
         React.createElement("div", {className: "bg-3"}, 
-          React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "container footer"}, 
             React.createElement("address", null, 
               "7512 Grandview Ave", React.createElement("br", null), 
               "Arvada, CO 80002", React.createElement("br", null), 
               "720-988-9853", React.createElement("br", null), 
               "TUES-SAT: 10-7  SUN: 12-7"
-            ), 
-            React.createElement("p", null, 
-              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
-              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
-              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
-              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
             )
           )
         )
@@ -51084,7 +51402,90 @@ var About = React.createClass({displayName: "About",
 
 module.exports = About;
 
-},{"react":224}],228:[function(require,module,exports){
+},{"react":224}],230:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Route = require('react-router');
+var Link = Route.Link;
+
+var AmmoList = React.createClass({displayName: "AmmoList",
+  render: function () {
+    var createAmmoRow = function (ammo) {
+      return (
+        React.createElement("div", {key: ammo.id}, 
+          React.createElement("div", {className: "gunRow col-md-3"}, 
+            React.createElement("div", {className: "img-thumbnail img-responsive"}, React.createElement("img", {height: "100px", src: ammo.image})), 
+            React.createElement("div", null, ammo.modelName), 
+            React.createElement("div", null, "$", ammo.price)
+          )
+        )
+      );
+    };
+    return (
+      React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}
+        ), 
+        React.createElement("div", {className: "in-background-text-other"}, 
+          React.createElement("h1", null, "Ammunition")
+        ), 
+        React.createElement("div", {className: "bg-2"}
+        ), 
+        React.createElement("div", {className: "break"}), 
+        React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "row"}, 
+            this.props.ammos.map(createAmmoRow, this)
+          )
+        ), 
+        React.createElement("div", {className: "bg-3"}, 
+          React.createElement("div", {className: "container footer"}, 
+            React.createElement("address", null, 
+              "7512 Grandview Ave", React.createElement("br", null), 
+              "Arvada, CO 80002", React.createElement("br", null), 
+              "720-988-9853", React.createElement("br", null), 
+              "TUES-SAT: 10-7  SUN: 12-7"
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = AmmoList;
+
+},{"react":224,"react-router":32}],231:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var AmmoApi = require('../../api/ammoApi');
+var AmmoList = require('./ammoList');
+
+var AmmoPage = React.createClass({displayName: "AmmoPage",
+  getInitialState: function () {
+    return {
+      ammos: []
+    };
+  },
+
+  componentDidMount: function () {
+    if (this.isMounted()) {
+      this.setState({ ammos: AmmoApi.getAllAmmos() });
+    }
+  },
+
+  render: function () {
+    return (
+      React.createElement("div", null, 
+        React.createElement(AmmoList, {ammos: this.state.ammos})
+      )
+    );
+  }
+});
+
+module.exports = AmmoPage;
+
+},{"../../api/ammoApi":225,"./ammoList":230,"react":224}],232:[function(require,module,exports){
 /*eslint-disable strict */ //disabling because jQuery runs as a global var
 
 var React = require('react');
@@ -51107,7 +51508,7 @@ var App = React.createClass({displayName: "App",
 
 module.exports = App;
 
-},{"./common/header":229,"jquery":2,"react":224,"react-router":32}],229:[function(require,module,exports){
+},{"./common/header":233,"jquery":2,"react":224,"react-router":32}],233:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51116,6 +51517,12 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 var IndexLink = ReactRouter.IndexLink;
+
+$(document).ready(function () {
+  $('.navbar-collapse').click('li', function() {
+    $('.navbar-toggle').click();
+  });
+});
 
 var Header = React.createClass({displayName: "Header",
   render: function () {
@@ -51138,9 +51545,9 @@ var Header = React.createClass({displayName: "Header",
               React.createElement("ul", {className: "nav navbar-nav"}, 
                 React.createElement("li", null, React.createElement(IndexLink, {to: "/"}, "HOME")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/guns"}, "GUNS")), 
-                React.createElement("li", null, React.createElement(Link, {to: "app"}, "LONG GUNS")), 
-                React.createElement("li", null, React.createElement(Link, {to: "app"}, "AMMUNITION")), 
-                React.createElement("li", null, React.createElement(Link, {to: "app"}, "CONTACT")), 
+                React.createElement("li", null, React.createElement(Link, {to: "/longGuns"}, "LONG GUNS")), 
+                React.createElement("li", null, React.createElement(Link, {to: "/ammunition"}, "AMMUNITION")), 
+                React.createElement("li", null, React.createElement(Link, {to: "/"}, "CONTACT")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/about"}, "ABOUT"))
               )
             )
@@ -51153,7 +51560,7 @@ var Header = React.createClass({displayName: "Header",
 
 module.exports = Header;
 
-},{"react":224,"react-router":32}],230:[function(require,module,exports){
+},{"react":224,"react-router":32}],234:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51175,26 +51582,26 @@ var GunList = React.createClass({displayName: "GunList",
     };
     return (
       React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}
+        ), 
+        React.createElement("div", {className: "in-background-text-other"}, 
+          React.createElement("h1", null, "Guns")
+        ), 
         React.createElement("div", {className: "bg-2"}
         ), 
+        React.createElement("div", {className: "break"}), 
         React.createElement("div", {className: "container"}, 
           React.createElement("div", {className: "row"}, 
             this.props.guns.map(createGunRow, this)
           )
         ), 
         React.createElement("div", {className: "bg-3"}, 
-          React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "container footer"}, 
             React.createElement("address", null, 
               "7512 Grandview Ave", React.createElement("br", null), 
               "Arvada, CO 80002", React.createElement("br", null), 
               "720-988-9853", React.createElement("br", null), 
               "TUES-SAT: 10-7  SUN: 12-7"
-            ), 
-            React.createElement("p", null, 
-              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
-              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
-              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
-              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
             )
           )
         )
@@ -51205,7 +51612,7 @@ var GunList = React.createClass({displayName: "GunList",
 
 module.exports = GunList;
 
-},{"react":224,"react-router":32}],231:[function(require,module,exports){
+},{"react":224,"react-router":32}],235:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51236,7 +51643,90 @@ var GunPage = React.createClass({displayName: "GunPage",
 
 module.exports = GunPage;
 
-},{"../../api/gunApi":225,"./gunList":230,"react":224}],232:[function(require,module,exports){
+},{"../../api/gunApi":227,"./gunList":234,"react":224}],236:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Route = require('react-router');
+var Link = Route.Link;
+
+var LongGunList = React.createClass({displayName: "LongGunList",
+  render: function () {
+    var createGunRow = function (gun) {
+      return (
+        React.createElement("div", {key: gun.id}, 
+          React.createElement("div", {className: "gunRow col-md-3"}, 
+            React.createElement("div", {className: "img-thumbnail img-responsive"}, React.createElement("img", {height: "100px", src: gun.image})), 
+            React.createElement("div", null, gun.modelName), 
+            React.createElement("div", null, "$", gun.price)
+          )
+        )
+      );
+    };
+    return (
+      React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}
+        ), 
+        React.createElement("div", {className: "in-background-text-other"}, 
+          React.createElement("h1", null, "Long Guns")
+        ), 
+        React.createElement("div", {className: "bg-2"}
+        ), 
+        React.createElement("div", {className: "break"}), 
+        React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "row"}, 
+            this.props.guns.map(createGunRow, this)
+          )
+        ), 
+        React.createElement("div", {className: "bg-3"}, 
+          React.createElement("div", {className: "container footer"}, 
+            React.createElement("address", null, 
+              "7512 Grandview Ave", React.createElement("br", null), 
+              "Arvada, CO 80002", React.createElement("br", null), 
+              "720-988-9853", React.createElement("br", null), 
+              "TUES-SAT: 10-7  SUN: 12-7"
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = LongGunList;
+
+},{"react":224,"react-router":32}],237:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var GunApi = require('../../api/gunApi');
+var GunList = require('./longGunList');
+
+var LongGunPage = React.createClass({displayName: "LongGunPage",
+  getInitialState: function () {
+    return {
+      guns: []
+    };
+  },
+
+  componentDidMount: function () {
+    if (this.isMounted()) {
+      this.setState({ guns: GunApi.getAllGuns() });
+    }
+  },
+
+  render: function () {
+    return (
+      React.createElement("div", null, 
+        React.createElement(GunList, {guns: this.state.guns})
+      )
+    );
+  }
+});
+
+module.exports = LongGunPage;
+
+},{"../../api/gunApi":227,"./longGunList":236,"react":224}],238:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51255,11 +51745,10 @@ var Home = React.createClass({displayName: "Home",
         React.createElement("div", {className: "in-background-text"}, 
           React.createElement("h1", null, 
             "YOUR ONE STOP SHOP FOR ALL YOUR GUN NEEDS"
-          ), 
-          React.createElement("div", {className: "break"}), 
-          React.createElement(Link, {className: "btn btn-info btn-lg", to: "app"}, "SHOP NOW")
+          )
         ), 
         React.createElement("div", {className: "bg-2"}, 
+          React.createElement("div", {className: "break"}), 
           React.createElement("h3", {className: "centered"}, React.createElement("strong", null, "GUNS * TRAINING * GUNSMITHING")), 
           React.createElement("div", {className: "break"}), 
           React.createElement("div", {className: "container"}, 
@@ -51295,18 +51784,12 @@ var Home = React.createClass({displayName: "Home",
           )
         ), 
         React.createElement("div", {className: "bg-3"}, 
-          React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "container footer"}, 
             React.createElement("address", null, 
               "7512 Grandview Ave", React.createElement("br", null), 
               "Arvada, CO 80002", React.createElement("br", null), 
               "720-988-9853", React.createElement("br", null), 
               "TUES-SAT: 10-7  SUN: 12-7"
-            ), 
-            React.createElement("p", null, 
-              "Lorem ipsum dolor sit amet, ius at fugit velit scriptorem, soleat verear apeirian cu vis. Forensibus scriptorem usu ne, sea decore patrioque argumentum at. Vix at odio commodo, cu mei quodsi salutatus. Labore efficiendi pro eu, mel no oratio nemore debitis. Prima instructior nec te. Ei nam facer deleniti." + ' ' +
-              "Vocibus concludaturque ex nec. Duo ut ridens probatus, eum fugit ceteros accommodare ut. Cu has tale falli eleifend. Cu has nonumy adversarium, quo an quaeque detraxit recusabo, eu vocibus evertitur suscipiantur his. Per habeo partem at, atomorum elaboraret mei te, audiam recteque vituperata vis ex." + ' ' +
-              "Te pro theophrastus consectetuer, option vocibus definiebas sea ei. Ne duo viderer assueverit, impetus apeirian phaedrum his eu, ubique essent id has. Pro cu movet zril. Ex agam ignota pri, vix munere fierent omittam eu. Mel cu ubique aperiam, sea probo vivendo te. An per duis labore antiopam, cu eum decore instructior." + ' ' +
-              "Eos labore omittam ei, erant tacimates sadipscing eu mei, his no illud mediocritatem. Esse wisi inciderint in mel, has id verear pertinax, ei mel veniam ignota. Nibh animal fabellas per te, ne his ignota civibus consequuntur. Has minimum offendit platonem ea, et duo concludaturque vituperatoribus, ea mea libris alterum."
             )
           )
         )
@@ -51317,7 +51800,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":224,"react-router":32}],233:[function(require,module,exports){
+},{"react":224,"react-router":32}],239:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51326,14 +51809,14 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var routes = require('./routes');
 var render = ReactDOM.render;
-var browserHistory = ReactRouter.browserHistory;
+var hashHistory = ReactRouter.hashHistory;
 
 render(
-  React.createElement(Router, {history: browserHistory, routes: routes}),
+  React.createElement(Router, {history: hashHistory, routes: routes}),
   document.getElementById('app')
 );
 
-},{"./routes":234,"react":224,"react-dom":4,"react-router":32}],234:[function(require,module,exports){
+},{"./routes":240,"react":224,"react-dom":4,"react-router":32}],240:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51345,16 +51828,20 @@ var IndexRoute = ReactRouter.IndexRoute;
 var App = require('./components/app');
 var HomePage = require('./components/homePage');
 var Guns = require('./components/guns/gunPage');
+var LongGuns = require('./components/guns/longGunPage');
 var About = require('./components/about/aboutPage');
+var Ammunitions = require('./components/ammunition/ammoPage');
 
 var routes = (
   React.createElement(Route, {path: "/", component: App}, 
     React.createElement(IndexRoute, {component: HomePage}), 
     React.createElement(Route, {path: "guns", component: Guns}), 
-    React.createElement(Route, {path: "about", component: About})
+    React.createElement(Route, {path: "longGuns", component: LongGuns}), 
+    React.createElement(Route, {path: "about", component: About}), 
+    React.createElement(Route, {path: "ammunition", component: Ammunitions})
   )
 );
 
 module.exports = routes;
 
-},{"./components/about/aboutPage":227,"./components/app":228,"./components/guns/gunPage":231,"./components/homePage":232,"react":224,"react-router":32}]},{},[233]);
+},{"./components/about/aboutPage":229,"./components/ammunition/ammoPage":231,"./components/app":232,"./components/guns/gunPage":235,"./components/guns/longGunPage":237,"./components/homePage":238,"react":224,"react-router":32}]},{},[239]);
