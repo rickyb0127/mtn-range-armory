@@ -6,10 +6,6 @@ var About = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="bg-1-other"></div>
-        <div className="in-background-text">
-          <h1>ABOUT</h1>
-        </div>
         <div className="bg-2">
         </div>
         <div className="container">

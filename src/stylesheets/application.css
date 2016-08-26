@@ -25,18 +25,45 @@
 .bg-1-home {
   opacity: 0.4;
   background-image: url("../images/mountains.JPG");
-  background-attachment: fixed;
   background-position: center;
-  background-size: 140%;
-  height: 600px;
+  background-size: cover;
+  height: 40em;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 350px) and (max-width: 760px){
+  .bg-1-home {
+    opacity: 0.4;
+    background-image: url("../images/mountains.JPG");
+    background-position: center;
+    background-size: cover;
+    height: 20em;
+    background-repeat: no-repeat;
+  }
+  .bg-1-other {
+    opacity: 0.4;
+    background-image: url("../images/background-1.jpg");
+    background-size: cover;
+    height: 2em;
+    background-position: center;
+    background-repeat:repeat;
+  }
+  .nav-logo {
+    height: 3em;
+    width: auto;
+  }
+  .in-background-text {
+    text-align: center;
+    position: relative;
+    top: 1em;
+    margin-top: -8em;
+  }
 }
 
 .bg-1-other {
   opacity: 0.4;
   background-image: url("../images/background-1.jpg");
-  background-attachment: fixed;
-  height: 600px;
+  height: 20em;
   background-position: center;
   background-repeat:repeat;
 }

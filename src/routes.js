@@ -2,17 +2,20 @@
 
 var React = require('react');
 
-var Router = require('react-router');
-var DefaultRoute = Router.DefaultRoute;
-var Route = Router.Route;
-var NotFoundRoute = Router.NotFoundRoute;
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var IndexRoute = ReactRouter.IndexRoute;
+var App = require('./components/app');
+var HomePage = require('./components/homePage');
+var Guns = require('./components/guns/gunPage');
+var About = require('./components/about/aboutPage');
 
 var routes = (
-  <Route name="app" path="/" handler={require('./components/app')}>
-    <DefaultRoute handler={require('./components/homePage')} />
-    <Route name="guns" handler={require('./components/guns/gunPage')} />
-    <Route name="about" handler={require('./components/about/aboutPage')} />
-    <NotFoundRoute handler={require('./components/NotFoundPage')} />
+  <Route path="/" component={App}>
+    <IndexRoute component={HomePage} />
+    <Route path="guns" component={Guns} />
+    <Route path="about" component={About} />
   </Route>
 );
 

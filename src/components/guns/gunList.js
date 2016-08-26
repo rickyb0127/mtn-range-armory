@@ -19,10 +19,6 @@ var GunList = React.createClass({
     };
     return (
       <div>
-        <div className="bg-1-other"></div>
-        <div className="in-background-text">
-          <h1>GUNS</h1>
-        </div>
         <div className="bg-2">
         </div>
         <div className="container">

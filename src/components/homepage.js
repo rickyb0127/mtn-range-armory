@@ -1,8 +1,12 @@
 "use strict";
 
 var React = require('react');
-var Route = require('react-router');
-var Link = Route.Link;
+// var Route = require('react-router');
+// var Link = Route.Link;
+
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
+var IndexLink = ReactRouter.IndexLink;
 
 var Home = React.createClass({
   render: function () {

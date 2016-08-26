@@ -1,29 +1,39 @@
 "use strict";
 
 var React = require('react');
-var Route = require('react-router');
-var Link = Route.Link;
+// var Route = require('react-router');
+// var Link = Route.Link;
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
+var IndexLink = ReactRouter.IndexLink;
 
 var Header = React.createClass({
   render: function () {
     return (
       <div>
-        <nav className="navbar navbar-inverse navbar-static-top">
-          <div className="container-fluid">
-            <Link to="app" className="navbar-brand">
-              <img src="images/mtn-range-armory-logo.png" />
-            </Link>
-            <ul className="nav navbar-nav">
-              <li><Link to="app">HOME</Link></li>
-              <li><Link to="guns">GUNS</Link></li>
-              <li><Link to="app">LONG GUNS</Link></li>
-              <li><Link to="app">AMUNITION</Link></li>
-              <li><Link to="app">CONTACT</Link></li>
-              <li><Link to="about">ABOUT</Link></li>
-            </ul>
-            <ul className="nav navbar-nav navbar-right">
-              <li><Link to="app">SIGN UP FOR OUR NEWSLETTER</Link></li>
-            </ul>
+        <nav className="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div className="container">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <IndexLink to="/" className="navbar-brand">
+                <img src="images/mtn-range-armory-logo.png" className="nav-logo" />
+              </IndexLink>
+            </div>
+            <div className="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+              <ul className="nav navbar-nav">
+                <li><IndexLink to="/">HOME</IndexLink></li>
+                <li><Link to="/guns">GUNS</Link></li>
+                <li><Link to="app">LONG GUNS</Link></li>
+                <li><Link to="app">AMMUNITION</Link></li>
+                <li><Link to="app">CONTACT</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
