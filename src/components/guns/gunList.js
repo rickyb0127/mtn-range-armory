@@ -9,7 +9,7 @@ var GunList = React.createClass({
     var createGunRow = function (gun) {
       return (
         <div key={gun.id}>
-          <div className="gunRow col-md-3">
+          <div className="item-row col-md-3">
             <div className="img-thumbnail img-responsive"><img height="100px" src={gun.image}/></div>
             <div>{gun.modelName}</div>
             <div>${gun.price}</div>

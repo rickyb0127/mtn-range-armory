@@ -1,26 +1,26 @@
 "use strict";
 
 var React = require('react');
-var GunApi = require('../../api/gunApi');
-var GunList = require('./longGunList');
+var LongGunApi = require('../../api/longGunApi');
+var LongGunList = require('./longGunList');
 
 var LongGunPage = React.createClass({
   getInitialState: function () {
     return {
-      guns: []
+      longGuns: []
     };
   },
 
   componentDidMount: function () {
     if (this.isMounted()) {
-      this.setState({ guns: GunApi.getAllGuns() });
+      this.setState({ longGuns: LongGunApi.getAllGuns() });
     }
   },
 
   render: function () {
     return (
       <div>
-        <GunList guns={this.state.guns} />
+        <LongGunList longGuns={this.state.longGuns} />
       </div>
     );
   }

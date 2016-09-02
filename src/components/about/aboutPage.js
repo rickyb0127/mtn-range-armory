@@ -15,6 +15,23 @@ var About = React.createClass({
         </div>
         <div className="break"></div>
         <div className="container">
+          <div className="centered">
+            <h3>WE ARE A TYPE 1 FFL DEALER</h3>
+            <h3>WE ACCEPT: </h3><br></br>
+            <h4>VISA</h4>
+            <h4>MASTERCARD</h4>
+            <h4>DISCOVER</h4>
+            <h4>AMEX</h4>
+          </div>
+          <p>
+          Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at.
+          </p>
+          <p>
+          Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at.
+          </p>
+          <p>
+          Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at.
+          </p>
           <p>
           Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at.
           </p>

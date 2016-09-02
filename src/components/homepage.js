@@ -23,7 +23,7 @@ var Home = React.createClass({
           <h3 className="centered"><strong>GUNS * TRAINING * GUNSMITHING</strong></h3>
           <div className="break"></div>
           <div className="container">
-            <div className="row centered">
+            <div className="row centered img-responsive">
               <div className="col-md-4">
                 <img src="../images/store.jpeg" width="300"/>
               </div>

@@ -6,13 +6,13 @@ var Link = Route.Link;
 
 var LongGunList = React.createClass({
   render: function () {
-    var createGunRow = function (gun) {
+    var createLongGunRow = function (longGun) {
       return (
-        <div key={gun.id}>
-          <div className="gunRow col-md-3">
-            <div className="img-thumbnail img-responsive"><img height="100px" src={gun.image}/></div>
-            <div>{gun.modelName}</div>
-            <div>${gun.price}</div>
+        <div key={longGun.id}>
+          <div className="item-row col-md-6">
+            <div className="img-thumbnail img-responsive"><img height="100px" src={longGun.image}/></div>
+            <div>{longGun.modelName}</div>
+            <div>${longGun.price}</div>
           </div>
         </div>
       );
@@ -29,7 +29,7 @@ var LongGunList = React.createClass({
         <div className="break"></div>
         <div className="container">
           <div className="row">
-            {this.props.guns.map(createGunRow, this)}
+            {this.props.longGuns.map(createLongGunRow, this)}
           </div>
         </div>
         <div className="bg-3">

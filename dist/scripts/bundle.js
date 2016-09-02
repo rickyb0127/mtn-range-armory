@@ -51359,11 +51359,350 @@ module.exports = {
       price: '445.00',
       image: 'images/charter-arms-chick-lady.png',
       isOnSale: false
+    },
+    {
+      id: '9',
+      modelName: 'Ruger SR 9mm Matte 10+1',
+      price: '459.00',
+      image: 'images/ruger-sr-9mm-matte.png',
+      isOnSale: false
+    },
+    {
+      id: '10',
+      modelName: 'WALTHER PPQ M2 9MM 15+1',
+      price: '629.99',
+      image: 'images/walther-ppq-m2-9mm.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '11',
+      modelName: 'Ruger SR 9MM Stainless 10+1',
+      price: '469.00',
+      image: 'images/ruger-sr-9mm-stainless.png',
+      isOnSale: false
+    },
+    {
+      id: '12',
+      modelName: '​S&W M&P 9 Shield 9mm 8+1',
+      price: '399.00',
+      image: 'images/sw-mp-9-shield-9mm.png',
+      isOnSale: true
+    },
+    {
+      id: '13',
+      modelName: '​RUGER SUPER BLACKHAWK .44MAG 6 SHOT',
+      price: '679.00',
+      image: 'images/ruger-super-blackhawk-44mag-6shot.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '14',
+      modelName: 'TAURUS MOD 66 .357 MAG 7SHOT',
+      price: '540.00',
+      image: 'images/taurus-mod-66-357-mag-7shot.png',
+      isOnSale: false
+    },
+    {
+      id: '15',
+      modelName: 'SPRINGFIELD XDS .45 FDE',
+      price: '539.00',
+      image: 'images/springfield-xds-45-fde.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '16',
+      modelName: 'SIG SAUER P-250 .45ACP 10+1',
+      price: '499.00',
+      image: 'images/sig-sauer-p-250-45acp.png',
+      isOnSale: false
+    },
+    {
+      id: '17',
+      modelName: 'BERSA THUNDER .40S&W',
+      price: '449.00',
+      image: 'images/bersa-thunder-40-sw.png',
+      isOnSale: false
+    },
+    {
+      id: '18',
+      modelName: 'KAHR ARMS CW 45 6+1',
+      price: '399.00',
+      image: 'images/kahr-arms-cw-45.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '19',
+      modelName: 'GLOCK 26 GEN 4 9MM',
+      price: '649.00',
+      image: 'images/glock-26-gen-4-9mm.png',
+      isOnSale: false
+    },
+    {
+      id: '20',
+      modelName: '​GLOCK 19 GEN 4 9MM',
+      price: '629.00',
+      image: 'images/glock-19-gen-4-9mm.png',
+      isOnSale: false
+    },
+    {
+      id: '21',
+      modelName: '​FNH F&N-40 .40 S&W',
+      price: '519.00',
+      image: 'images/fhh-fn-40-40-sw.png',
+      isOnSale: false
+    },
+    {
+      id: '22',
+      modelName: 'AMERICAN TACTICAL 1911 .45ACP',
+      price: '539.00',
+      image: 'images/american-tactical-1911-45acp.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '23',
+      modelName: '​JIMENEZ JA-9 9MM',
+      price: '249.00',
+      image: 'images/jimenez-ja-9-9mm.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '24',
+      modelName: 'TAURUS MILLENIUM GEN 2 9MM',
+      price: '329.00',
+      image: 'images/taurus-millenium-gen-2-9mm.png',
+      isOnSale: false
+    },
+    {
+      id: '25',
+      modelName: 'S&W M&P SHIELD .45ACP',
+      price: '479.00',
+      image: 'images/sw-mp-shield-45acp.png',
+      isOnSale: false
+    },
+    {
+      id: '26',
+      modelName: 'SCCY 9MM FDE 10+1 X 2',
+      price: '329.00',
+      image: 'images/sccy-9mm-fde-10-1x2.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '27',
+      modelName: 'SCCY 9MM PURPLE 10+1 X 2',
+      price: '329.00',
+      image: 'images/sccy-9mm-purple-10-1x2.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '28',
+      modelName: '​SCCY 9MM TIFFANY 10+1 X 2',
+      price: '399.00',
+      image: 'images/sccy-9mm-tiffany-10-1x2.png',
+      isOnSale: false
+    },
+    {
+      id: '29',
+      modelName: '​S&W M&P BODYGUARD .380 W/LAZER',
+      price: '459.00',
+      image: 'images/sw-mp-bodyguard-380-lazer.png',
+      isOnSale: false
+    },
+    {
+      id: '30',
+      modelName: 'S&W 642 AIRWEIGHT .38SPL 5SHOT',
+      price: '425.00',
+      image: 'images/sw-642-airweight-38spl-5shot.png',
+      isOnSale: false
+    },
+    {
+      id: '31',
+      modelName: 'TAURUS JUDGE .45LC/ .410 DAO 5 SHOT',
+      price: '555.00',
+      image: 'images/taurus-judge-45lc-410-dao-5shot.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '32',
+      modelName: 'COBRA DERRINGER .22MAGNUM',
+      price: '199.00',
+      image: 'images/cobra-derringer-22magnum.jpeg',
+      isOnSale: false
     }
   ]
 };
 
 },{}],229:[function(require,module,exports){
+"use strict";
+
+//This file is mocking a web API by hitting hard coded data.
+var longGuns = require('./longGunData').longGuns;
+var _ = require('lodash');
+
+//This would be performed on the server in a real app. Just stubbing in.
+var _generateId = function(longGun) {
+	return longGun.id;
+};
+
+var _clone = function(item) {
+	return JSON.parse(JSON.stringify(item)); //return cloned copy so that the item is passed by value instead of by reference
+};
+
+var LongGunApi = {
+	getAllGuns: function() {
+		return _clone(longGuns);
+	},
+
+	getGunById: function(id) {
+		var longGun = _.find(longGuns, {id: id});
+		return _clone(longGun);
+	},
+
+	saveGun: function(longGun) {
+		//pretend an ajax call to web api is made here
+		console.log('Pretend this just saved the longGun to the DB via AJAX call...');
+
+		if (longGun.id) {
+			var existingLongGunIndex = _.indexOf(longGuns, _.find(longGuns, {id: longGun.id}));
+			longGuns.splice(existingLongGunIndex, 1, longGun);
+		} else {
+			//Just simulating creation here.
+			//The server would generate ids for new longGuns in a real app.
+			//Cloning so copy returned is passed by value rather than by reference.
+			longGun.id = _generateId(longGun);
+			longGuns.push(longGun);
+		}
+
+		return _clone(longGun);
+	},
+
+	deleteGun: function(id) {
+		console.log('Pretend this just deleted the longGun from the DB via an AJAX call...');
+		_.remove(longGuns, { id: id});
+	}
+};
+
+module.exports = LongGunApi;
+
+},{"./longGunData":230,"lodash":3}],230:[function(require,module,exports){
+module.exports = {
+  longGuns:
+  [
+    {
+      id: '1',
+      modelName: 'MARLIN MODEL 60 .22 LR W/ SCOPE 14+1',
+      price: '209.00',
+      image: 'images/marlin-model-60-22-lr-w-scope-14-1.png',
+      isOnSale: false
+    },
+    {
+      id: '2',
+      modelName: 'SAVAGE AXIS .270 WIN W/SCOPE',
+      price: '379.00',
+      image: 'images/savage-axis-270-win-w-scope.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '3',
+      modelName: 'RUGER M-77 HAWKEYE WALNUT .300 WIN MAG',
+      price: '779.00',
+      image: 'images/ruger-m-77-hawkeye-walnut-300-win-mag.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '4',
+      modelName: '​DPMS AR-10 .308',
+      price: '829.00',
+      image: 'images/dpms-ar-10-308.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '5',
+      modelName: '​Del-Ton Sierra AR-15 5.56/.223 ',
+      price: '629.00',
+      image: 'images/del-ton-sierra-ar-15.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '6',
+      modelName: '​AMERICAN TACTICAL OMNI HYBRID AR-15 5.56/.223',
+      price: '649.00',
+      image: 'images/american-tactical-omni-hybrid-ar-15.jpeg',
+      isOnSale: true
+    },
+    {
+      id: '7',
+      modelName: 'AMERICAN TACTICAL OMNI HYBRID AR-15 PISTOL 5.56/.223',
+      price: '675.00',
+      image: 'images/american-tactical-omni-hyrbid-ar-15-pistol.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '8',
+      modelName: 'AMERICAN TACTICAL OMNI HYBRID AR-15 .300 BLACKOUT',
+      price: '675.00',
+      image: 'images/american-tactical-omni-hybrid-ar-15-blackout.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '9',
+      modelName: 'MOSSBERG PATRIOT .300WM W/ 6"-9" CHAMPION BI POD & SCOPE',
+      price: '399.00',
+      image: 'images/mossberg-patriot-300wm-champion-pod-scope.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '10',
+      modelName: 'REMINGTON 783 7MM MAG W/SCOPE',
+      price: '399.00',
+      image: 'images/remington-783-7mm-mag-scope.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '11',
+      modelName: 'RUGER AMERICAN RIFLE .308WIN W/CHAMPION 9"- 13" BIPOD',
+      price: '489.00',
+      image: 'images/ruger-american-rifle-308win-champion-pod.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '12',
+      modelName: '​H&R EXCELL 12 GU AUTO 2 3/4" & 3" 18" BARREL',
+      price: '369.00',
+      image: 'images/hr-excell-12-gu-auto-barrel.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '13',
+      modelName: '​SAVAGE 320 12GU PUMP 28" BARREL 2 3/4"-3"',
+      price: '249.00',
+      image: 'images/savage-320-12gu-pump-barrel.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '14',
+      modelName: 'MOSSBERG 935 MAG AUTOLOADER 28"BARREL 2 3/4", 3", 3 1/2',
+      price: '659.00',
+      image: 'images/mossberg-935-mag-autoloader-28-barrel.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '15',
+      modelName: 'MOSSBERG SILVER RESERVE 12GU O/U 28" BARREL',
+      price: '689.00',
+      image: 'images/mossberg-silver-reserve-12gu-barrel.jpeg',
+      isOnSale: false
+    },
+    {
+      id: '16',
+      modelName: 'SAVAGE 555 O/U 12GU 28" BARREL',
+      price: '649.00',
+      image: 'images/savage-555-12gu-barrel.png',
+      isOnSale: false
+    }
+  ]
+};
+
+},{}],231:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51381,6 +51720,23 @@ var About = React.createClass({displayName: "About",
         ), 
         React.createElement("div", {className: "break"}), 
         React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "centered"}, 
+            React.createElement("h3", null, "WE ARE A TYPE 1 FFL DEALER"), 
+            React.createElement("h3", null, "WE ACCEPT: "), React.createElement("br", null), 
+            React.createElement("h4", null, "VISA"), 
+            React.createElement("h4", null, "MASTERCARD"), 
+            React.createElement("h4", null, "DISCOVER"), 
+            React.createElement("h4", null, "AMEX")
+          ), 
+          React.createElement("p", null, 
+          "Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at."
+          ), 
+          React.createElement("p", null, 
+          "Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at."
+          ), 
+          React.createElement("p", null, 
+          "Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at."
+          ), 
           React.createElement("p", null, 
           "Lorem ipsum dolor sit amet, tota movet te nec, enim complectitur ius eu. An eripuit qualisque mei, eam epicurei constituto cu. Est ut vide dolor prodesset, ius epicurei persecuti in. Sed ad voluptatum scripserit, his in noster liberavisse. Eam eius iriure definiebas ei, nam alii adhuc quando ne. Soluta maiorum vis at."
           )
@@ -51402,7 +51758,7 @@ var About = React.createClass({displayName: "About",
 
 module.exports = About;
 
-},{"react":224}],230:[function(require,module,exports){
+},{"react":224}],232:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51414,7 +51770,7 @@ var AmmoList = React.createClass({displayName: "AmmoList",
     var createAmmoRow = function (ammo) {
       return (
         React.createElement("div", {key: ammo.id}, 
-          React.createElement("div", {className: "gunRow col-md-3"}, 
+          React.createElement("div", {className: "item-row col-md-3"}, 
             React.createElement("div", {className: "img-thumbnail img-responsive"}, React.createElement("img", {height: "100px", src: ammo.image})), 
             React.createElement("div", null, ammo.modelName), 
             React.createElement("div", null, "$", ammo.price)
@@ -51454,7 +51810,7 @@ var AmmoList = React.createClass({displayName: "AmmoList",
 
 module.exports = AmmoList;
 
-},{"react":224,"react-router":32}],231:[function(require,module,exports){
+},{"react":224,"react-router":32}],233:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51485,7 +51841,7 @@ var AmmoPage = React.createClass({displayName: "AmmoPage",
 
 module.exports = AmmoPage;
 
-},{"../../api/ammoApi":225,"./ammoList":230,"react":224}],232:[function(require,module,exports){
+},{"../../api/ammoApi":225,"./ammoList":232,"react":224}],234:[function(require,module,exports){
 /*eslint-disable strict */ //disabling because jQuery runs as a global var
 
 var React = require('react');
@@ -51508,7 +51864,7 @@ var App = React.createClass({displayName: "App",
 
 module.exports = App;
 
-},{"./common/header":233,"jquery":2,"react":224,"react-router":32}],233:[function(require,module,exports){
+},{"./common/header":235,"jquery":2,"react":224,"react-router":32}],235:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51560,7 +51916,7 @@ var Header = React.createClass({displayName: "Header",
 
 module.exports = Header;
 
-},{"react":224,"react-router":32}],234:[function(require,module,exports){
+},{"react":224,"react-router":32}],236:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51572,7 +51928,7 @@ var GunList = React.createClass({displayName: "GunList",
     var createGunRow = function (gun) {
       return (
         React.createElement("div", {key: gun.id}, 
-          React.createElement("div", {className: "gunRow col-md-3"}, 
+          React.createElement("div", {className: "item-row col-md-3"}, 
             React.createElement("div", {className: "img-thumbnail img-responsive"}, React.createElement("img", {height: "100px", src: gun.image})), 
             React.createElement("div", null, gun.modelName), 
             React.createElement("div", null, "$", gun.price)
@@ -51612,7 +51968,7 @@ var GunList = React.createClass({displayName: "GunList",
 
 module.exports = GunList;
 
-},{"react":224,"react-router":32}],235:[function(require,module,exports){
+},{"react":224,"react-router":32}],237:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51643,7 +51999,7 @@ var GunPage = React.createClass({displayName: "GunPage",
 
 module.exports = GunPage;
 
-},{"../../api/gunApi":227,"./gunList":234,"react":224}],236:[function(require,module,exports){
+},{"../../api/gunApi":227,"./gunList":236,"react":224}],238:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51652,13 +52008,13 @@ var Link = Route.Link;
 
 var LongGunList = React.createClass({displayName: "LongGunList",
   render: function () {
-    var createGunRow = function (gun) {
+    var createLongGunRow = function (longGun) {
       return (
-        React.createElement("div", {key: gun.id}, 
-          React.createElement("div", {className: "gunRow col-md-3"}, 
-            React.createElement("div", {className: "img-thumbnail img-responsive"}, React.createElement("img", {height: "100px", src: gun.image})), 
-            React.createElement("div", null, gun.modelName), 
-            React.createElement("div", null, "$", gun.price)
+        React.createElement("div", {key: longGun.id}, 
+          React.createElement("div", {className: "item-row col-md-6"}, 
+            React.createElement("div", {className: "img-thumbnail img-responsive"}, React.createElement("img", {height: "100px", src: longGun.image})), 
+            React.createElement("div", null, longGun.modelName), 
+            React.createElement("div", null, "$", longGun.price)
           )
         )
       );
@@ -51675,7 +52031,7 @@ var LongGunList = React.createClass({displayName: "LongGunList",
         React.createElement("div", {className: "break"}), 
         React.createElement("div", {className: "container"}, 
           React.createElement("div", {className: "row"}, 
-            this.props.guns.map(createGunRow, this)
+            this.props.longGuns.map(createLongGunRow, this)
           )
         ), 
         React.createElement("div", {className: "bg-3"}, 
@@ -51695,30 +52051,30 @@ var LongGunList = React.createClass({displayName: "LongGunList",
 
 module.exports = LongGunList;
 
-},{"react":224,"react-router":32}],237:[function(require,module,exports){
+},{"react":224,"react-router":32}],239:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
-var GunApi = require('../../api/gunApi');
-var GunList = require('./longGunList');
+var LongGunApi = require('../../api/longGunApi');
+var LongGunList = require('./longGunList');
 
 var LongGunPage = React.createClass({displayName: "LongGunPage",
   getInitialState: function () {
     return {
-      guns: []
+      longGuns: []
     };
   },
 
   componentDidMount: function () {
     if (this.isMounted()) {
-      this.setState({ guns: GunApi.getAllGuns() });
+      this.setState({ longGuns: LongGunApi.getAllGuns() });
     }
   },
 
   render: function () {
     return (
       React.createElement("div", null, 
-        React.createElement(GunList, {guns: this.state.guns})
+        React.createElement(LongGunList, {longGuns: this.state.longGuns})
       )
     );
   }
@@ -51726,7 +52082,7 @@ var LongGunPage = React.createClass({displayName: "LongGunPage",
 
 module.exports = LongGunPage;
 
-},{"../../api/gunApi":227,"./longGunList":236,"react":224}],238:[function(require,module,exports){
+},{"../../api/longGunApi":229,"./longGunList":238,"react":224}],240:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51752,7 +52108,7 @@ var Home = React.createClass({displayName: "Home",
           React.createElement("h3", {className: "centered"}, React.createElement("strong", null, "GUNS * TRAINING * GUNSMITHING")), 
           React.createElement("div", {className: "break"}), 
           React.createElement("div", {className: "container"}, 
-            React.createElement("div", {className: "row centered"}, 
+            React.createElement("div", {className: "row centered img-responsive"}, 
               React.createElement("div", {className: "col-md-4"}, 
                 React.createElement("img", {src: "../images/store.jpeg", width: "300"})
               ), 
@@ -51800,7 +52156,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":224,"react-router":32}],239:[function(require,module,exports){
+},{"react":224,"react-router":32}],241:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51816,7 +52172,7 @@ render(
   document.getElementById('app')
 );
 
-},{"./routes":240,"react":224,"react-dom":4,"react-router":32}],240:[function(require,module,exports){
+},{"./routes":242,"react":224,"react-dom":4,"react-router":32}],242:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51844,4 +52200,4 @@ var routes = (
 
 module.exports = routes;
 
-},{"./components/about/aboutPage":229,"./components/ammunition/ammoPage":231,"./components/app":232,"./components/guns/gunPage":235,"./components/guns/longGunPage":237,"./components/homePage":238,"react":224,"react-router":32}]},{},[239]);
+},{"./components/about/aboutPage":231,"./components/ammunition/ammoPage":233,"./components/app":234,"./components/guns/gunPage":237,"./components/guns/longGunPage":239,"./components/homePage":240,"react":224,"react-router":32}]},{},[241]);
