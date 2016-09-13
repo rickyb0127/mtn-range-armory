@@ -36,7 +36,7 @@ var Header = React.createClass({
                 <li><Link to="/guns">GUNS</Link></li>
                 <li><Link to="/longGuns">LONG GUNS</Link></li>
                 <li><Link to="/ammunition">AMMUNITION</Link></li>
-                <li><Link to="/">CONTACT</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
               </ul>
             </div>

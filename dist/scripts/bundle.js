@@ -51903,7 +51903,7 @@ var Header = React.createClass({displayName: "Header",
                 React.createElement("li", null, React.createElement(Link, {to: "/guns"}, "GUNS")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/longGuns"}, "LONG GUNS")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/ammunition"}, "AMMUNITION")), 
-                React.createElement("li", null, React.createElement(Link, {to: "/"}, "CONTACT")), 
+                React.createElement("li", null, React.createElement(Link, {to: "/contact"}, "CONTACT")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/about"}, "ABOUT"))
               )
             )
@@ -51917,6 +51917,66 @@ var Header = React.createClass({displayName: "Header",
 module.exports = Header;
 
 },{"react":224,"react-router":32}],236:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Contact = React.createClass({displayName: "Contact",
+  render: function () {
+    return (
+      React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}
+        ), 
+        React.createElement("div", {className: "in-background-text-other"}, 
+          React.createElement("h1", null, "Contact")
+        ), 
+        React.createElement("div", {className: "bg-2"}
+        ), 
+        React.createElement("div", {className: "break"}), 
+        React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "centered"}, 
+            React.createElement("h3", null, "ORDERS, QUESTIONS, FEEDBACK, CUSTOM QUOTES: ")
+          ), 
+          React.createElement("form", null, 
+            React.createElement("div", {className: "form-group"}, 
+              React.createElement("label", {for: "name"}, "Name"), 
+              React.createElement("input", {type: "text", className: "form-control", id: "name", placeholder: "Name"})
+            ), 
+            React.createElement("div", {className: "form-group"}, 
+              React.createElement("label", {for: "email"}, "Email"), 
+              React.createElement("input", {type: "email", className: "form-control", id: "email", placeholder: "Email"})
+            ), 
+            React.createElement("div", {className: "form-group"}, 
+              React.createElement("label", {for: "subject"}, "Subject"), 
+              React.createElement("input", {type: "text", className: "form-control", id: "subject", placeholder: "Subject"})
+            ), 
+            React.createElement("div", {className: "form-group"}, 
+              React.createElement("label", {for: "message"}, "Message"), 
+              React.createElement("textarea", {className: "form-control", id: "message", rows: "3"})
+            ), 
+            React.createElement("div", {className: "form-group"}, 
+              React.createElement("input", {className: "btn btn-default", type: "submit", value: "Submit"})
+            )
+          )
+        ), 
+        React.createElement("div", {className: "bg-3"}, 
+          React.createElement("div", {className: "container footer"}, 
+            React.createElement("address", null, 
+              "7512 Grandview Ave", React.createElement("br", null), 
+              "Arvada, CO 80002", React.createElement("br", null), 
+              "720-988-9853", React.createElement("br", null), 
+              "TUES-SAT: 10-7  SUN: 12-7"
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Contact;
+
+},{"react":224}],237:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51968,7 +52028,7 @@ var GunList = React.createClass({displayName: "GunList",
 
 module.exports = GunList;
 
-},{"react":224,"react-router":32}],237:[function(require,module,exports){
+},{"react":224,"react-router":32}],238:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51999,7 +52059,7 @@ var GunPage = React.createClass({displayName: "GunPage",
 
 module.exports = GunPage;
 
-},{"../../api/gunApi":227,"./gunList":236,"react":224}],238:[function(require,module,exports){
+},{"../../api/gunApi":227,"./gunList":237,"react":224}],239:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52051,7 +52111,7 @@ var LongGunList = React.createClass({displayName: "LongGunList",
 
 module.exports = LongGunList;
 
-},{"react":224,"react-router":32}],239:[function(require,module,exports){
+},{"react":224,"react-router":32}],240:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52082,7 +52142,7 @@ var LongGunPage = React.createClass({displayName: "LongGunPage",
 
 module.exports = LongGunPage;
 
-},{"../../api/longGunApi":229,"./longGunList":238,"react":224}],240:[function(require,module,exports){
+},{"../../api/longGunApi":229,"./longGunList":239,"react":224}],241:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52156,7 +52216,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":224,"react-router":32}],241:[function(require,module,exports){
+},{"react":224,"react-router":32}],242:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52172,7 +52232,7 @@ render(
   document.getElementById('app')
 );
 
-},{"./routes":242,"react":224,"react-dom":4,"react-router":32}],242:[function(require,module,exports){
+},{"./routes":243,"react":224,"react-dom":4,"react-router":32}],243:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52187,6 +52247,7 @@ var Guns = require('./components/guns/gunPage');
 var LongGuns = require('./components/guns/longGunPage');
 var About = require('./components/about/aboutPage');
 var Ammunitions = require('./components/ammunition/ammoPage');
+var Contact = require('./components/contact/contactPage');
 
 var routes = (
   React.createElement(Route, {path: "/", component: App}, 
@@ -52194,10 +52255,11 @@ var routes = (
     React.createElement(Route, {path: "guns", component: Guns}), 
     React.createElement(Route, {path: "longGuns", component: LongGuns}), 
     React.createElement(Route, {path: "about", component: About}), 
-    React.createElement(Route, {path: "ammunition", component: Ammunitions})
+    React.createElement(Route, {path: "ammunition", component: Ammunitions}), 
+    React.createElement(Route, {path: "contact", component: Contact})
   )
 );
 
 module.exports = routes;
 
-},{"./components/about/aboutPage":231,"./components/ammunition/ammoPage":233,"./components/app":234,"./components/guns/gunPage":237,"./components/guns/longGunPage":239,"./components/homePage":240,"react":224,"react-router":32}]},{},[241]);
+},{"./components/about/aboutPage":231,"./components/ammunition/ammoPage":233,"./components/app":234,"./components/contact/contactPage":236,"./components/guns/gunPage":238,"./components/guns/longGunPage":240,"./components/homePage":241,"react":224,"react-router":32}]},{},[242]);
