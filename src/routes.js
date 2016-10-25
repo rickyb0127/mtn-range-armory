@@ -13,6 +13,7 @@ var LongGuns = require('./components/guns/longGunPage');
 var About = require('./components/about/aboutPage');
 var Ammunitions = require('./components/ammunition/ammoPage');
 var Contact = require('./components/contact/contactPage');
+var Calendar = require('./components/calendar/calendarPage');
 
 var routes = (
   <Route path="/" component={App}>
@@ -22,6 +23,7 @@ var routes = (
     <Route path="about" component={About} />
     <Route path="ammunition" component={Ammunitions} />
     <Route path="contact" component={Contact} />
+    <Route path="calendar" component={Calendar} />
   </Route>
 );
 

@@ -38,6 +38,7 @@ var Header = React.createClass({
                 <li><Link to="/ammunition">AMMUNITION</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/calendar">CCW CALENDAR</Link></li>
               </ul>
             </div>
           </div>

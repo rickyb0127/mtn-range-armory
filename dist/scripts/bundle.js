@@ -51864,7 +51864,33 @@ var App = React.createClass({displayName: "App",
 
 module.exports = App;
 
-},{"./common/header":235,"jquery":2,"react":224,"react-router":32}],235:[function(require,module,exports){
+},{"./common/header":236,"jquery":2,"react":224,"react-router":32}],235:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Calendar = React.createClass({displayName: "Calendar",
+  render: function () {
+    return (
+      React.createElement("div", null, 
+        React.createElement("div", {className: "bg-1-other"}
+        ), 
+        React.createElement("div", {className: "in-background-text-other"}, 
+          React.createElement("h1", null, "CCW Calendar")
+        ), 
+        React.createElement("div", {className: "bg-2"}
+        ), 
+        React.createElement("div", {className: "container"}, 
+          React.createElement("iframe", {src: "https://calendar.google.com/calendar/embed?showTitle=0&showTabs=0&height=600&wkst=1&bgcolor=%23FFFFFF&src=joeguy0127%40gmail.com&color=%231B887A&ctz=America%2FDenver", style: {border: 0}, width: "100%", height: "600", frameborder: "0", scrolling: "no"})
+        )
+      )
+    );
+  }
+});
+
+module.exports = Calendar;
+
+},{"react":224}],236:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51904,7 +51930,8 @@ var Header = React.createClass({displayName: "Header",
                 React.createElement("li", null, React.createElement(Link, {to: "/longGuns"}, "LONG GUNS")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/ammunition"}, "AMMUNITION")), 
                 React.createElement("li", null, React.createElement(Link, {to: "/contact"}, "CONTACT")), 
-                React.createElement("li", null, React.createElement(Link, {to: "/about"}, "ABOUT"))
+                React.createElement("li", null, React.createElement(Link, {to: "/about"}, "ABOUT")), 
+                React.createElement("li", null, React.createElement(Link, {to: "/calendar"}, "CCW CALENDAR"))
               )
             )
           )
@@ -51916,7 +51943,7 @@ var Header = React.createClass({displayName: "Header",
 
 module.exports = Header;
 
-},{"react":224,"react-router":32}],236:[function(require,module,exports){
+},{"react":224,"react-router":32}],237:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -51976,7 +52003,7 @@ var Contact = React.createClass({displayName: "Contact",
 
 module.exports = Contact;
 
-},{"react":224}],237:[function(require,module,exports){
+},{"react":224}],238:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52028,7 +52055,7 @@ var GunList = React.createClass({displayName: "GunList",
 
 module.exports = GunList;
 
-},{"react":224,"react-router":32}],238:[function(require,module,exports){
+},{"react":224,"react-router":32}],239:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52059,7 +52086,7 @@ var GunPage = React.createClass({displayName: "GunPage",
 
 module.exports = GunPage;
 
-},{"../../api/gunApi":227,"./gunList":237,"react":224}],239:[function(require,module,exports){
+},{"../../api/gunApi":227,"./gunList":238,"react":224}],240:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52111,7 +52138,7 @@ var LongGunList = React.createClass({displayName: "LongGunList",
 
 module.exports = LongGunList;
 
-},{"react":224,"react-router":32}],240:[function(require,module,exports){
+},{"react":224,"react-router":32}],241:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52142,7 +52169,7 @@ var LongGunPage = React.createClass({displayName: "LongGunPage",
 
 module.exports = LongGunPage;
 
-},{"../../api/longGunApi":229,"./longGunList":239,"react":224}],241:[function(require,module,exports){
+},{"../../api/longGunApi":229,"./longGunList":240,"react":224}],242:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52216,7 +52243,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":224,"react-router":32}],242:[function(require,module,exports){
+},{"react":224,"react-router":32}],243:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52232,7 +52259,7 @@ render(
   document.getElementById('app')
 );
 
-},{"./routes":243,"react":224,"react-dom":4,"react-router":32}],243:[function(require,module,exports){
+},{"./routes":244,"react":224,"react-dom":4,"react-router":32}],244:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -52248,6 +52275,7 @@ var LongGuns = require('./components/guns/longGunPage');
 var About = require('./components/about/aboutPage');
 var Ammunitions = require('./components/ammunition/ammoPage');
 var Contact = require('./components/contact/contactPage');
+var Calendar = require('./components/calendar/calendarPage');
 
 var routes = (
   React.createElement(Route, {path: "/", component: App}, 
@@ -52256,10 +52284,11 @@ var routes = (
     React.createElement(Route, {path: "longGuns", component: LongGuns}), 
     React.createElement(Route, {path: "about", component: About}), 
     React.createElement(Route, {path: "ammunition", component: Ammunitions}), 
-    React.createElement(Route, {path: "contact", component: Contact})
+    React.createElement(Route, {path: "contact", component: Contact}), 
+    React.createElement(Route, {path: "calendar", component: Calendar})
   )
 );
 
 module.exports = routes;
 
-},{"./components/about/aboutPage":231,"./components/ammunition/ammoPage":233,"./components/app":234,"./components/contact/contactPage":236,"./components/guns/gunPage":238,"./components/guns/longGunPage":240,"./components/homePage":241,"react":224,"react-router":32}]},{},[242]);
+},{"./components/about/aboutPage":231,"./components/ammunition/ammoPage":233,"./components/app":234,"./components/calendar/calendarPage":235,"./components/contact/contactPage":237,"./components/guns/gunPage":239,"./components/guns/longGunPage":241,"./components/homePage":242,"react":224,"react-router":32}]},{},[243]);
